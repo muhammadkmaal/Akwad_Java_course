@@ -140,3 +140,73 @@
      wget -O zoom_amd64.deb https://zoom.us/client/latest/zoom_amd64.deb
      sudo apt install ./zoom_amd64.deb
      ```
+
+
+
+     ## Installation on macOS
+
+### 1. Java (JDK) Installation
+1. **Download the JDK**:
+   - https://www.oracle.com/il-en/java/technologies/downloads
+   - Download the installer for macOS.
+
+2. **Install the JDK**:
+   - Run the downloaded `.dmg` file.
+   - Follow the on-screen instructions to install the JDK.
+   - Set the `JAVA_HOME` environment variable:
+     - Open Terminal and edit your shell profile (`.bash_profile`, `.zshrc`, or `.bashrc`):
+       ```bash
+       nano ~/.zshrc
+       ```
+     - Add the following line:
+       ```bash
+       export JAVA_HOME=$(/usr/libexec/java_home)
+       ```
+     - Save and close the file, then reload your profile:
+       ```bash
+       source ~/.zshrc
+       ```
+
+3. **Verify Installation**:
+   - Open Terminal and type `java -version` to check the installed version.
+
+### 2. NetBeans Installation
+1. **Download NetBeans**:
+   - Visit the [NetBeans download page](https://netbeans.apache.org/download/index.html).
+   - Download the installer for macOS.
+
+2. **Install NetBeans**:
+   - Run the downloaded `.dmg` file and drag the NetBeans icon to your Applications folder.
+
+3. **Launch NetBeans**:
+   - Open NetBeans from the Applications folder.
+
+### 3. Maven Installation
+1. **Install Homebrew (if not already installed)**:
+   - Open Terminal and run:
+     ```bash
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     ```
+
+2. **Install Maven**:
+   - Use Homebrew to install Maven:
+     ```bash
+     brew install maven
+     ```
+
+3. **Verify Installation**:
+   - Open Terminal and type `mvn -v` to check the Maven version.
+
+### 4. Zoom Installation
+1. **Download Zoom**:
+   - Visit the [Zoom Download Center](https://zoom.us/download).
+   - Under "Zoom Client for Meetings," click "Download" for macOS.
+
+2. **Install Zoom**:
+   - Run the downloaded `.pkg` file.
+   - Follow the on-screen instructions to complete the installation.
+
+3. **Launch Zoom**:
+   - Once installed, you can launch Zoom from the Applications folder.
+
+---
